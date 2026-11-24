@@ -14,7 +14,7 @@ SafeStyler matches words and phrases rather than replacing every matching letter
 
 ## Run the web app locally
 
-Use Node.js 20.19 or later in the 20.x series, or Node.js 22.12 or later.
+Use the latest patch of Node.js 24 LTS to match GitHub Actions. For local development, you can also use Node.js 22.12 or later in the 22.x series, or Node.js 26.x.
 
 ```sh
 npm ci
