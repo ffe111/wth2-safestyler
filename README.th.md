@@ -1,6 +1,6 @@
 # SafeStyler · ไทยผสมอักษร
 
-[English](README.md) · [API ของตัวแปลง](packages/converter/README.md)
+[ลองใช้เว็บเดโม](https://ffe111.github.io/wth2-safestyler/) · [English](README.md) · [API ของตัวแปลง](packages/converter/README.md)
 
 SafeStyler เป็นเครื่องมือแปลงคำไทยที่เลือกไว้ให้เป็นรูปสะกดที่ผสมอักษรไทยกับอักษรละติน ใช้เว็บเพื่อดูว่าคำไหนเปลี่ยนก่อนคัดลอกผล หรือเรียกไลบรารี TypeScript เพื่อใช้กฎเดียวกันในโค้ดของคุณ
 

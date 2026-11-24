@@ -1,6 +1,6 @@
 # SafeStyler · ไทยผสมอักษร
 
-[ภาษาไทย](README.th.md) · [Converter API](packages/converter/README.md)
+[Try the live demo](https://ffe111.github.io/wth2-safestyler/) · [ภาษาไทย](README.th.md) · [Converter API](packages/converter/README.md)
 
 SafeStyler is a Thai text converter that replaces selected words with mixed Thai and Latin spellings. Use the browser app to preview each change before you copy the result. Use the TypeScript library when you need the same rules in your own code.
 
@@ -12,7 +12,7 @@ SafeStyler is a Thai text converter that replaces selected words with mixed Thai
 
 SafeStyler matches words and phrases rather than replacing every matching letter. The app processes your text in the browser and does not send it to a server. The rules are not a platform's banned-word list, and the output does not guarantee any platform moderation outcome.
 
-## Run the web app
+## Run the web app locally
 
 Use Node.js 20.19 or later in the 20.x series, or Node.js 22.12 or later.
 
