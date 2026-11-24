@@ -1,5 +1,5 @@
-import { categories, convertThai } from '@thai-word-styler/converter';
-import type { CategoryId, Edit } from '@thai-word-styler/converter';
+import { categories, convertThai } from 'wth2-safestyler';
+import type { CategoryId, Edit } from 'wth2-safestyler';
 import './style.css';
 
 const form = document.querySelector<HTMLFormElement>('#converter-form')!;

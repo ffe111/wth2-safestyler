@@ -1,6 +1,6 @@
 # SafeStyler · ไทยผสมอักษร
 
-[Try the live demo](https://ffe111.github.io/wth2-safestyler/) · [ภาษาไทย](README.th.md) · [Converter API](packages/converter/README.md)
+[Try the live demo](https://ffe111.github.io/wth2-safestyler/) · [npm package](https://www.npmjs.com/package/wth2-safestyler) · [ภาษาไทย](README.th.md) · [Converter API](packages/converter/README.md)
 
 SafeStyler is a Thai text converter that replaces selected words with mixed Thai and Latin spellings. Use the browser app to preview each change before you copy the result. Use the TypeScript library when you need the same rules in your own code.
 
@@ -25,10 +25,14 @@ Open the URL that Vite prints. Enter Thai text or select **ใส่ตัวอ
 
 ## Call the converter from TypeScript
 
-The web app imports `@thai-word-styler/converter` from this repository's npm workspace. The package is not published to npm. From the repository root, run `npm run build` before importing the workspace package locally.
+Install `wth2-safestyler` in your project. Then import `convertThai` from an ES module.
+
+```sh
+npm install wth2-safestyler
+```
 
 ```ts
-import { convertThai } from '@thai-word-styler/converter';
+import { convertThai } from 'wth2-safestyler';
 
 const result = convertThai('เงินเดือนและเงิน', { categories: ['finance'] });
 

@@ -1,8 +1,16 @@
 {
-  "name": "@thai-word-styler/converter",
+  "name": "wth2-safestyler",
   "version": "0.1.0",
   "description": "Convert selected Thai words to configured mixed-script spellings.",
   "license": "MIT",
+  "keywords": ["thai", "thai-language", "thai-text", "text-converter", "mixed-script"],
+  "homepage": "https://ffe111.github.io/wth2-safestyler/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffe111/wth2-safestyler.git",
+    "directory": "packages/converter"
+  },
+  "bugs": { "url": "https://github.com/ffe111/wth2-safestyler/issues" },
   "type": "module",
   "exports": {
     ".": {
@@ -17,5 +25,5 @@
     "prepack": "npm run build && node -e \"require('node:fs').copyFileSync('../../LICENSE', 'dist/LICENSE')\""
   },
   "engines": { "node": ">=18" },
-  "publishConfig": { "access": "public" }
+  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" }
 }

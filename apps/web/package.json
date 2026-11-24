@@ -7,6 +7,6 @@
     "build": "tsc --noEmit && vite build --base ./",
     "preview": "vite preview"
   },
-  "dependencies": { "@thai-word-styler/converter": "0.1.0" },
+  "dependencies": { "wth2-safestyler": "0.1.0" },
   "devDependencies": { "vite": "^7.3.8" }
 }

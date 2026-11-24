@@ -1,9 +1,13 @@
-# @thai-word-styler/converter
+# wth2-safestyler
 
-SafeStyler's TypeScript library converts selected Thai words to mixed Thai and Latin spellings. The web app uses this package from the local npm workspace. The package is not published to npm.
+SafeStyler's TypeScript library converts selected Thai words to mixed Thai and Latin spellings. [Try the web demo](https://ffe111.github.io/wth2-safestyler/) or use the library in an ES module.
+
+```sh
+npm install wth2-safestyler
+```
 
 ```ts
-import { categories, convertThai } from '@thai-word-styler/converter';
+import { convertThai } from 'wth2-safestyler';
 
 const result = convertThai('เงินเดือนและเงิน เปิดประมูล', {
   categories: ['finance', 'commerce'],
@@ -21,6 +25,6 @@ console.log(result.edits.map(({ original }) => original)); // ['เงิน', '
 
 ## Add a rule
 
-1. Add a unique `id` and `exact` to [`src/rules.ts`](src/rules.ts). Set `categories`, `forms`, `sourceNote` and `status`. Use `action: 'replace'` and an explicit `output`, or `action: 'keep'` to block edits across a span. Draft rules are stored but never applied.
-2. For a reviewed replacement, add the expected output and a similar string that must stay unchanged to [`test/fixtures.mjs`](test/fixtures.mjs). Add a sentence fixture if the change affects Thai segmentation, overlap or protected text.
+1. Add a unique `id` and `exact` to [`src/rules.ts`](https://github.com/ffe111/wth2-safestyler/blob/main/packages/converter/src/rules.ts). Set `categories`, `forms`, `sourceNote`, and `status`. Use `action: 'replace'` and an explicit `output`, or `action: 'keep'` to block edits across a span. Draft rules are stored but never applied.
+2. For a reviewed replacement, add the expected output and a similar string that must stay unchanged to [`test/fixtures.mjs`](https://github.com/ffe111/wth2-safestyler/blob/main/packages/converter/test/fixtures.mjs). Add a sentence fixture if the change affects Thai segmentation, overlap or protected text.
 3. Run `npm test` and `npm run test:e2e` from the workspace root. The web reads categories and converts through this package, so there is no second set of rules to update.

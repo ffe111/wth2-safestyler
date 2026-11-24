@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { categories, convertThai } from '@thai-word-styler/converter';
+import { categories, convertThai } from 'wth2-safestyler';
 import { createConverter } from '../dist/engine.js';
 import { rules } from '../dist/rules.js';
 import { seedExamples, sentenceExamples } from './fixtures.mjs';

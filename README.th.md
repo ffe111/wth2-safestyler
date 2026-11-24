@@ -1,6 +1,6 @@
 # SafeStyler · ไทยผสมอักษร
 
-[ลองใช้เว็บเดโม](https://ffe111.github.io/wth2-safestyler/) · [English](README.md) · [API ของตัวแปลง](packages/converter/README.md)
+[ลองใช้เว็บเดโม](https://ffe111.github.io/wth2-safestyler/) · [แพ็กเกจ npm](https://www.npmjs.com/package/wth2-safestyler) · [English](README.md) · [API ของตัวแปลง](packages/converter/README.md)
 
 SafeStyler เป็นเครื่องมือแปลงคำไทยที่เลือกไว้ให้เป็นรูปสะกดที่ผสมอักษรไทยกับอักษรละติน ใช้เว็บเพื่อดูว่าคำไหนเปลี่ยนก่อนคัดลอกผล หรือเรียกไลบรารี TypeScript เพื่อใช้กฎเดียวกันในโค้ดของคุณ
 
@@ -25,10 +25,14 @@ npm run dev
 
 ## เรียกตัวแปลงจาก TypeScript
 
-เว็บนำเข้า `@thai-word-styler/converter` จาก npm workspace ใน repo นี้ แพ็กเกจยังไม่เผยแพร่บน npm ก่อนนำเข้าแพ็กเกจในเครื่อง ให้รัน `npm run build` จากโฟลเดอร์หลักของ repo
+ติดตั้ง `wth2-safestyler` ในโปรเจกต์ของคุณ แล้วนำเข้า `convertThai` จาก ES module
+
+```sh
+npm install wth2-safestyler
+```
 
 ```ts
-import { convertThai } from '@thai-word-styler/converter';
+import { convertThai } from 'wth2-safestyler';
 
 const result = convertThai('เงินเดือนและเงิน', { categories: ['finance'] });
 

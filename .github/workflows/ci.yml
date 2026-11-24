@@ -22,7 +22,7 @@ jobs:
       - run: npm test
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
-      - run: npm pack --workspace @thai-word-styler/converter --dry-run
+      - run: npm pack --workspace wth2-safestyler --dry-run
       - name: Upload the tested site
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
