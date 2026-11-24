@@ -1,0 +1,13 @@
+{
+  "name": "thai-word-styler-workspace",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
+  "engines": { "node": "^20.19.0 || >=22.12.0" },
+  "scripts": {
+    "dev": "npm run build --workspace @thai-word-styler/converter && npm run dev --workspace @thai-word-styler/web",
+    "build": "npm run build --workspace @thai-word-styler/converter && npm run build --workspace @thai-word-styler/web",
+    "test": "npm run test --workspace @thai-word-styler/converter",
+    "test:e2e": "npm run build && playwright test"
+  },
+  "devDependencies": { "@playwright/test": "^1.65.1", "typescript": "~5.9.3" }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f6ef" />
+    <meta name="description" content="แปลงคำไทยเป็นคำไทยผสมอักษรตามชุดกฎที่เลือก ประมวลผลในเบราว์เซอร์" />
+    <title>SafeStyler · ไทยผสมอักษร</title>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="intro">
+        <p class="eyebrow">SAFESTYLER</p>
+        <h1>ไทยผสมอักษร</h1>
+        <p>วางข้อความ เลือกหมวด แล้วดูว่าคำไหนถูกเปลี่ยนก่อนคัดลอก</p>
+      </header>
+
+      <form id="converter-form" class="workspace">
+        <section class="card" aria-label="ต้นฉบับ">
+          <div class="field-heading">
+            <label for="source">ข้อความต้นฉบับ</label>
+            <button type="button" id="example" class="quiet" disabled>ใส่ตัวอย่าง</button>
+          </div>
+          <textarea id="source" rows="7" placeholder="พิมพ์หรือวางข้อความภาษาไทย" spellcheck="false" autocapitalize="off"></textarea>
+
+          <fieldset>
+            <legend>หมวดที่จะใช้แปลง</legend>
+            <div id="categories" class="categories"></div>
+          </fieldset>
+          <button type="submit" id="convert" class="primary" disabled>แปลงข้อความ</button>
+        </section>
+
+        <section class="card result" aria-label="ผลการแปลง">
+          <div class="field-heading">
+            <label for="output">ข้อความที่แปลงแล้ว</label>
+            <button type="button" id="copy" class="quiet" disabled>คัดลอกผลลัพธ์</button>
+          </div>
+          <textarea id="output" rows="7" placeholder="ผลลัพธ์จะแสดงที่นี่" readonly></textarea>
+          <p id="status" class="status" role="status" aria-live="polite">ยังไม่ได้แปลงข้อความ</p>
+          <section id="changes" aria-labelledby="changes-title" hidden>
+            <h2 id="changes-title">คำที่เปลี่ยน</h2>
+            <ul id="edits" class="edits"></ul>
+          </section>
+        </section>
+      </form>
+
+      <noscript><p>ต้องเปิด JavaScript เพื่อแปลงข้อความในเบราว์เซอร์</p></noscript>
+      <footer>
+        ข้อความประมวลผลในเบราว์เซอร์ ไม่ส่งไปยังเซิร์ฟเวอร์ เครื่องมือนี้แปลงตามชุดกฎ ไม่ได้ตรวจนโยบายของแพลตฟอร์ม
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
