@@ -2,6 +2,7 @@
   "name": "@thai-word-styler/converter",
   "version": "0.1.0",
   "description": "Convert selected Thai words to configured mixed-script spellings.",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
@@ -13,7 +14,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test test/*.test.mjs",
-    "prepack": "npm run build"
+    "prepack": "npm run build && node -e \"require('node:fs').copyFileSync('../../LICENSE', 'dist/LICENSE')\""
   },
   "engines": { "node": ">=18" },
   "publishConfig": { "access": "public" }

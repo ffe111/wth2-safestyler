@@ -53,3 +53,7 @@ The browser tests run against the production build in Chromium with desktop and 
 [Open an issue](https://github.com/ffe111/wth2-safestyler/issues/new) with a short, non-private Thai example. Include the current result, the result you expected, and any lookalike word that should stay unchanged. For a pull request, update the [shared rule list](packages/converter/src/rules.ts) and add a [test example](packages/converter/test/fixtures.mjs).
 
 Write development documentation in English first. Mirror user-facing README changes in [README.th.md](README.th.md).
+
+## License
+
+SafeStyler uses the [MIT License](LICENSE).
